@@ -1,0 +1,236 @@
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #BEEBE9;
+  width: 300px;
+  height: 100vh;
+}
+
+.side-bar-header {
+  background-color: #f6eec7;
+  height: 100px;
+  padding: 40px;
+}
+
+.header-name a{
+  font-size: 22px;
+  color: #c1ab05;
+  text-decoration: none;
+}
+
+.side-bar-main{
+  background-color: #BEEBE9;
+  font-size: 14px;
+  height: calc(100vh - 100px);
+  padding: 40px;
+  overflow: scroll;
+}
+
+.create-care_user a{
+  border: 1px solid #eb6ea0;
+  padding: 10px;
+  font-size: 20px;
+  color: #dc6b9a;
+  text-decoration: none;
+  border-radius: 10px; /* 角を丸くする */
+  
+}
+
+.care_user {
+  border: 1px solid #fafdff;
+  padding: 10px;
+  font-size: 20px;
+  color: #dc6b9a;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.schedules {
+  background-color: #F4DADA;
+  width: calc(100% - 300px);
+  height: 100vh;
+  display: inline-block;
+  text-align:center;
+  position: relative;
+  overflow: scroll;
+}
+
+.schedule {
+  background-color: #fef9fb;
+  position: absolute;
+  top: 0;
+	left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 80px auto;
+  width: 800px;
+  height: 100%;
+  text-align:center;
+  padding: 40px 50px;
+  border-radius: 30px;
+}
+
+.daily-schedule-title {
+  font-size: 35px;
+  color: #4e454a;
+  padding: 1rem 2rem;
+  background: #ffb6b9;
+  border-radius: 20px;
+}
+
+.daily-schedule {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 35px;
+  padding: 30px 5px 0;
+}
+
+.daily-schedule-times {
+  color: #4e454a;
+}
+
+.daily-schedule-content a{
+  color: #504946;
+}
+
+.daily-schedule-staff {
+  font-size: 25px;
+}
+
+.daily-schedule-border {
+  border-bottom: ２px solid #000;
+}
+
+hr.ex {
+  height: 2px;
+  width: 90%;
+  border: none;
+  border-top: 2px #000000 dotted;
+  }
+
+.new_button a{
+  font-size: 22px;
+  color: #fff;
+  width: 40%;
+  padding: 20px;
+  background: #ff8080;
+  border-radius: 40px;
+  margin: 40px auto;
+  text-decoration: none;
+  display:block;
+}
+
+/* 新規投稿画面 */
+
+h2 {
+  font-size: 35px;
+  color: #4e454a;
+  letter-spacing: 10px;
+  position: relative;
+  padding: 1.5rem 1rem;
+}
+
+h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.new-schedules {
+  background-color: #F4DADA;
+  width: 100vw;
+  height: 100vh;
+  display: inline-block;
+  text-align:center;
+  position: relative;
+  overflow: scroll;
+}
+
+.new-schedule {
+  background-color: #fef9fb;
+  position: absolute;
+  top: 0;
+	left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 80px auto;
+  width: 900px;
+  height: 850px;
+  text-align:center;
+  padding: 30px 50px;
+  border-radius: 30px;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px;
+}
+
+.headline {
+  color: #4e454a;
+  font-size: 25px;
+}
+
+.form-input {
+  background-color: #DDDDDD;
+  width: 480px;
+  border-radius: 15px;
+  overflow: hidden;
+  
+}
+
+.form-text {
+  font-size: 20px;
+  border: 2px solid #ffb6b9;
+  border-radius: 15px;
+  height: 70px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-text:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
+.form-textarea {
+  font-size: 18px;
+  padding: 0.5em;
+  border: 2px solid #ffb6b9;
+  border-radius: 15px;
+  height: 300px;
+  width: 480px;
+  resize: none;
+  padding-left: 10px;
+}
+
+textarea:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
+.time {
+  width: 480px;
+  font-size: 18px;
+  padding: 0.5em;
+  border: 2px solid #ffb6b9;
+  border-radius: 15px;
+}
+
+.time:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
