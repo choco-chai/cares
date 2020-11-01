@@ -5,7 +5,7 @@
     </div>
     
     利用者さんご本人のお名前を入力してください
-    <%= form_with model: @care_user, url: new_care_user_url, local: true do |f| %>
+    <%= form_with model: @care_user, local: true do |f| %>
       <div class="form-input-care_user">
         <%= f.text_field :name, placeholder: '例）山田' %>
         <%= f.submit "登録", class: 'btn1' %>
