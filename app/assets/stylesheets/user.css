@@ -17,6 +17,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  overflow: scroll;
 }
 
 .sign_in_inner .field-top {
@@ -32,6 +33,14 @@
   font-size: 17px;
   letter-spacing: 3px;
   padding: 15px 0 10px;
+  margin: auto;
+}
+
+.sign_in_inner .field-sign_up {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 3px;
+  padding: 5px 0 5px;
   margin: auto;
 }
 
@@ -76,6 +85,19 @@ input[type="password"] {
 }
 
 input[type="password"]:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
+input[type="text"] {
+  width: 250px;
+  padding: 5px;
+  border: 2px solid #ffb6b9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+input[type="text"]:focus {
   border-color: #56a9ff;
   outline: 0;
 }

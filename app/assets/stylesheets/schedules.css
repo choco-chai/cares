@@ -1,6 +1,9 @@
 .wrapper {
   display: flex;
 }
+
+/* サイドバー上部 */
+
 .side-bar {
   background-color: #BEEBE9;
   width: 300px;
@@ -13,11 +16,32 @@
   padding: 40px;
 }
 
-.header-name a{
+.header-name {
   font-size: 22px;
   color: #c1ab05;
   text-decoration: none;
 }
+
+.logout,
+a.logout {
+  border: 2px solid #998700;
+  font-size: 18px;
+  margin: auto 5px auto 35px;
+  padding: 13px;
+  color: #fff;
+  background-color: #ccb400;
+  width: 90%;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.logout:hover,
+a.logout:hover {
+  color: #fff;
+  background-color: #e6cb00;
+}
+
+/* サイドバーメイン */
 
 .side-bar-main{
   background-color: #BEEBE9;
@@ -35,8 +59,14 @@
   font-size: 20px;
   color: #dc6b9a;
   text-decoration: none;
-  border-radius: 10px; /* 角を丸くする */
-  
+  border-radius: 10px;
+
+}
+
+.create-care_user:hover a{
+  color: #FFF;
+  background-color: #eb6ea0;
+  text-decoration: none;
 }
 
 .care_user a{
@@ -129,6 +159,11 @@ hr.ex {
   display:block;
 }
 
+.new_button:hover a {
+  color: #fff;
+  background: #ffcccc;
+} 
+
 /* 新規投稿画面 */
 
 h2 {
@@ -136,7 +171,7 @@ h2 {
   color: #4e454a;
   letter-spacing: 10px;
   position: relative;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 h2:after {
