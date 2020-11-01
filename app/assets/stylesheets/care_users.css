@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+}
+
+.schedule {
+  background-color: #fef9fb;
+  position: absolute;
+  top: 0;
+	left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 80px auto;
+  width: 800px;
+  height: 100%;
+  text-align:center;
+  padding: 40px 50px;
+  border-radius: 30px;
+}

@@ -89,6 +89,8 @@ a.logout:hover {
   text-decoration: none;
 }
 
+/* スケジュール一覧画面 */
+
 .schedules {
   background-color: #F4DADA;
   width: calc(100% - 300px);
@@ -98,8 +100,6 @@ a.logout:hover {
   position: relative;
   overflow: scroll;
 }
-
-/* スケジュール一覧画面 */
 
 .schedule {
   background-color: #fef9fb;
