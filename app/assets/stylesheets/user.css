@@ -1,0 +1,81 @@
+.sign_in {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe6f2;
+  position: relative;
+}
+
+.sign_in .sign_in_inner {
+  width: 55%;
+  height: 85%;
+  text-align: center;
+  background-color: #fef9fb;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.sign_in_inner .field-top {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 3px;
+  padding: 25px 0 7px;
+  margin: auto;
+}
+
+.sign_in_inner .field {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 3px;
+  padding: 15px 0 10px;
+  margin: auto;
+}
+
+.field-input {
+  font-size: 17px;
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+
+.btn{
+  display: block;
+  padding: 10px;
+  margin: 10px auto 20px;
+  color: #fff;
+  border: 3px dotted #ff5bad;
+  background-color: #ff99cc;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+input[type="email"] {
+  width: 250px;
+  padding: 5px;
+  border: 2px solid #ffb6b9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+input[type="email"]:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
+input[type="password"] {
+  width: 250px;
+  padding: 5px;
+  border: 2px solid #ffb6b9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+input[type="password"]:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
