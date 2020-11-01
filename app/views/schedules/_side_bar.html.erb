@@ -1,6 +1,6 @@
 <div class="side-bar-header">
   <div class="header-name">
-    渡辺
+    <%= current_user.username %>さんログイン中
     <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
   </div>
 </div>

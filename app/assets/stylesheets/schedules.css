@@ -12,25 +12,28 @@
 
 .side-bar-header {
   background-color: #f6eec7;
-  height: 100px;
-  padding: 40px;
+  height: 150px;
+  padding: 20px;
 }
 
 .header-name {
-  font-size: 22px;
+  display: block;
+  font-size: 17px;
   color: #c1ab05;
   text-decoration: none;
+  margin: 5px;
 }
 
 .logout,
 a.logout {
+  display: block;
   border: 2px solid #998700;
   font-size: 18px;
-  margin: auto 5px auto 35px;
+  margin: 17px auto auto;
   padding: 13px;
   color: #fff;
   background-color: #ccb400;
-  width: 90%;
+  width: 50%;
   text-decoration: none;
   border-radius: 15px;
 }
@@ -60,7 +63,6 @@ a.logout:hover {
   color: #dc6b9a;
   text-decoration: none;
   border-radius: 10px;
-
 }
 
 .create-care_user:hover a{
@@ -79,6 +81,12 @@ a.logout:hover {
   color: #4e454a;
   text-decoration: none;
   border-radius: 10px;
+}
+
+.care_user:hover a{
+  color: #FFF;
+  background-color: #ffb6b9;
+  text-decoration: none;
 }
 
 .schedules {
