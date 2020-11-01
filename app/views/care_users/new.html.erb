@@ -1,15 +1,15 @@
-<div class="schedules">
-  <div class="schedule">
-    <div class="daily-schedule-title">
+<div class="care_user-new-top">
+  <div class="care_user-new-main">
+    <div class="care_user-new-title">
       新規利用者登録
     </div>
     
-    利用者さんご本人のお名前を<br>
-    入力してください
-
-    <hr class="ex">
-    <div class="new_button">
-    <a href="#">登録</a>
-    </div>
+    利用者さんご本人のお名前を入力してください
+    <%= form_with model: @care_user, url: new_care_user_url, local: true do |f| %>
+      <div class="form-input-care_user">
+        <%= f.text_field :name, placeholder: '例）山田' %>
+        <%= f.submit "登録", class: 'btn1' %>
+      </div>
+    <% end %>
   </div>
 </div>
