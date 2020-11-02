@@ -234,7 +234,6 @@ h2:after {
 }
 
 .form-input {
-  background-color: #DDDDDD;
   width: 480px;
   border-radius: 15px;
   overflow: hidden;
@@ -246,7 +245,7 @@ h2:after {
   border: 2px solid #ffb6b9;
   border-radius: 15px;
   height: 70px;
-  width: 100%;
+  width: 480px;
   padding-left: 10px;
 }
 

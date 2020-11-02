@@ -11,7 +11,9 @@
   </div>
 
   <div class="care_user">
-  <a href="#">利用者１</a>
+    <% @care_users.each do |care_user|%>
+      <%= link_to "#{care_user.name}さん", new_schedule_path %></a>
+    <% end %>
   </div>
 </div>
 

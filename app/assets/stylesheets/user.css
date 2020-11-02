@@ -99,11 +99,24 @@ input[type="text"] {
   width: 250px;
   padding: 5px;
   border: 2px solid #ffb6b9;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
 input[type="text"]:focus {
+  border-color: #56a9ff;
+  outline: 0;
+}
+
+input[type="text"][name="new"] {
+  width: 480px;
+  padding: 5px;
+  border: 2px solid #ffb6b9;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+input[type="text"][name="new"]:focus {
   border-color: #56a9ff;
   outline: 0;
 }

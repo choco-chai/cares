@@ -14,9 +14,7 @@
       <div class="headline">
       実施したこと
       </div>
-      <div class="form-input">
-      <input type="text" class="form-text" placeholder= "入力してください">
-      </div>
+      <input type="text" class="form-text" name="new", placeholder= "入力してください">
     </div>
 
     <div class="contents">
@@ -27,10 +25,15 @@
     </div>
 
     <div class="contents">
-    <div class="headline">
-      写真
+      <div class="headline">
+        写真
       </div>
-    <%# f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+      <%# f.file_field :images, name: 'message[images][]', id: 'message_image' %>
     </div>
+
+    <div class="new_button">
+      <a href="#">入力内容を保存</a>
+    </div>
+
   </div>
 </div>
