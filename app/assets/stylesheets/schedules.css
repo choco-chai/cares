@@ -155,7 +155,7 @@ hr.ex {
   border-top: 2px #000000 dotted;
   }
 
-.new_button a{
+.new_button {
   font-size: 22px;
   color: #fff;
   width: 40%;
@@ -167,10 +167,28 @@ hr.ex {
   display:block;
 }
 
-.new_button:hover a {
+.new_button:hover {
   color: #fff;
   background: #ffcccc;
 } 
+
+input[type="submit"] {
+  font-size: 22px;
+  width: 250px;
+  padding: 5px;
+  width: 30%;
+  padding: 20px;
+  color: #fff;
+  background: #ff8080;
+  border-radius: 30px;
+  overflow: hidden;
+  border-style: none;
+}
+
+input[type="submit"]:hover {
+  color: #fff;
+  background: #ffcccc;
+}
 
 /* 新規投稿画面 */
 

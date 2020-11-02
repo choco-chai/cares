@@ -12,7 +12,7 @@
 
   <div class="care_user">
     <% @care_users.each do |care_user|%>
-      <%= link_to "#{care_user.name}さん", new_schedule_path %></a>
+      <%= link_to "#{care_user.name}さん", care_user_schedules_path(care_user) %></a>
     <% end %>
   </div>
 </div>

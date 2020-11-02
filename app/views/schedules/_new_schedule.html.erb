@@ -1,7 +1,6 @@
-<div class="new-schedules">
-  <div class="new-schedule">
-
-  <h2>新規投稿</h2>
+<div class="schedules">
+  <div class="schedule">
+    <h2>新規投稿</h2>
 
   <%= form_with model: [@care_user, @schedule], class: 'form', local: true do |f| %>
     <div class="contents">
@@ -15,7 +14,7 @@
       <div class="headline">
       実施したこと
       </div>
-      <%= f.text_field :text, class: 'form-text', id: 'new', placeholder: '実施したことを入力' %>
+      <%= f.text_field :title, class: 'form-text', id: 'new', placeholder: '実施したことを入力' %>
     </div>
 
     <div class="contents">

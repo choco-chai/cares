@@ -108,7 +108,7 @@ input[type="text"]:focus {
   outline: 0;
 }
 
-input[type="text"][name="new"] {
+input[type="text"]#new {
   width: 480px;
   padding: 5px;
   border: 2px solid #ffb6b9;
@@ -116,7 +116,7 @@ input[type="text"][name="new"] {
   overflow: hidden;
 }
 
-input[type="text"][name="new"]:focus {
+input[type="text"]#new:focus {
   border-color: #56a9ff;
   outline: 0;
 }
