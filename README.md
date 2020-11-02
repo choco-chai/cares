@@ -29,7 +29,7 @@
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | title            | string     | null: false                    |
-| text             | string     | null: false                    |
+| text             | text       | null: false                    |
 | times_id         | integer    | null: false                    |
 | care_user        | references | null: false, foreign_key: true |
 
