@@ -1,0 +1,12 @@
+<div class="daily-schedule">
+    <div class="daily-schedule-times">
+      <%= schedule.times %>
+    </div>
+    <div class="daily-schedule-content">
+      <%= link_to schedule.title, care_user_schedule_path(@care_user.id,schedule.id) %>
+    </div>
+    <div class="daily-schedule-staff">
+      <%= schedule.user.username%>
+    </div>
+</div>
+    <hr class="ex">

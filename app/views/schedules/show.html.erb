@@ -2,12 +2,15 @@
   <div class="new-schedule">
 
   <div class="contents">
-    <h3>実施時刻　"実施したこと"</h3>
+    <h3>
+    <%= @schedule.times%>
+    <%= @schedule.title%>
+    </h3>
   </div>
-
+      <%= "担当：#{@schedule.user.username}"%>
   <div class="contents">
       <div class="show-content">
-      サンプル 担当者表示させる
+      <%= @schedule.text%>
       </div>
   </div>
 
@@ -22,7 +25,7 @@
       <div class="headline">
         コメント
       </div>
-      
+      <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
     </div>
   </div>
 </div>

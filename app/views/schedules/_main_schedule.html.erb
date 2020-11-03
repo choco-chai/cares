@@ -3,18 +3,7 @@
     <div class="daily-schedule-title">
       <%= "#{@care_user.name}さん　一日のスケジュール" %>
     </div>
-    <div class="daily-schedule">
-      <div class="daily-schedule-times">
-        9:00
-      </div>
-      <div class="daily-schedule-content">
-        <a herf="#">朝食</a>
-      </div>
-      <div class="daily-schedule-staff">
-        担当者：渡辺
-      </div>
-    </div>
-    <hr class="ex">
+    <%= render partial: 'care_content', collection: @schedules, as: "schedule" %>
     <div class="new_button">
     <%= link_to '実施内容を追加する', new_care_user_schedule_path(@care_user) %>
     </div>
