@@ -19,7 +19,7 @@ class SchedulesController < ApplicationController
       redirect_to care_user_schedules_path(@care_user)
     else
       @schedules = @care_user.schedules.includes(:care_user)
-      render :index
+      render :new
     end
   end
 
