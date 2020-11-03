@@ -30,8 +30,9 @@
 | ---------------- | ---------- | ------------------------------ |
 | title            | string     | null: false                    |
 | text             | text       | null: false                    |
-| times_id         | integer    | null: false                    |
+| times            | string     | null: false                    |
 | care_user        | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_055428) do
+ActiveRecord::Schema.define(version: 2020_11_03_055506) do
 
   create_table "care_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -25,7 +25,9 @@ ActiveRecord::Schema.define(version: 2020_11_02_055428) do
     t.bigint "care_user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
     t.index ["care_user_id"], name: "index_schedules_on_care_user_id"
+    t.index ["user_id"], name: "index_schedules_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -42,4 +44,5 @@ ActiveRecord::Schema.define(version: 2020_11_02_055428) do
   end
 
   add_foreign_key "schedules", "care_users"
+  add_foreign_key "schedules", "users"
 end

@@ -4,6 +4,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new
     @care_user = CareUser.find(params[:care_user_id])
     @care_users = CareUser.all
+    @schedules = @care_user.schedules.includes(:care_user)
   end
 
   def new
@@ -17,6 +18,7 @@ class SchedulesController < ApplicationController
     if @schedule.save
       redirect_to care_user_schedules_path(@care_user)
     else
+      @schedules = @care_user.schedules.includes(:care_user)
       render :index
     end
   end
