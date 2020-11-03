@@ -1,5 +1,5 @@
 class CareUser < ApplicationRecord
-  has_many :schedules
+  has_many :schedules, dependent: :destroy
 
   validates :name, presence: true
 end
