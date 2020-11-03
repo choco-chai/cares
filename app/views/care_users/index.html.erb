@@ -1,5 +1,17 @@
-<div class="wrapper">
-  <div class="side-bar">
-    <%= render "schedules/side_bar" %>
+<div class="care_user-new-top">
+  <div class="care_user-new-main">
+    <div class="care_user-new-title">
+      利用者を選択してください
+    </div>
+    
+    <div class="create-care_user">
+    <a href="#">＋　新規利用者登録</a>
+  </div>
+
+  <div class="care_user">
+    <% @care_users.each do |care_user|%>
+      <%= link_to "#{care_user.name}さん", care_user_schedules_path(care_user) %></a>
+    <% end %>
+  </div>
   </div>
 </div>
