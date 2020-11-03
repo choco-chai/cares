@@ -1,0 +1,47 @@
+<div class="new-schedules">
+  <div class="new-schedule">
+
+  <div class="contents">
+    <h3>
+    <%= @schedule.times%>
+    <%= @schedule.title%>
+    編集
+    </h3>
+  </div>
+      <%= "担当：#{@schedule.user.username}"%>
+  <%= form_with model: [@care_user, @schedule], class: 'form', local: true do |f| %>
+  <div class="contents">
+      <div class="headline">
+      実施時刻
+      </div>
+      <%= f.text_field :times, class: 'form-text', id: 'new', placeholder: 'ケア開始時刻を入力' %>
+    </div>
+
+    <div class="contents">
+      <div class="headline">
+      実施したこと
+      </div>
+      <%= f.text_field :title, class: 'form-text', id: 'new', placeholder: '実施したことを入力' %>
+    </div>
+
+    <div class="contents">
+      <div class="headline">
+      詳細
+      </div>
+      <%= f.text_area :text, class: 'form-textarea', placeholder: '詳細情報を入力' %>
+    </div>
+
+    <div class="contents">
+      <div class="headline">
+        写真
+      </div>
+      <%# f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+    </div>
+
+      <%= f.submit '入力内容を保存' %>
+
+  <% end %>
+      <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+    </div>
+  </div>
+</div>
