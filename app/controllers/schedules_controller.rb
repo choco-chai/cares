@@ -29,6 +29,6 @@ class SchedulesController < ApplicationController
   private
 
   def schedule_params
-    params.require(:schedule).permit(:times, :title, :text).merge(care_user_id: params[:care_user_id])
+    params.require(:schedule).permit(:times, :title, :text).merge(care_user_id: params[:care_user_id], user_id: current_user.id)
   end
 end
