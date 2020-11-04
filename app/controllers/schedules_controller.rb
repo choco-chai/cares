@@ -33,6 +33,12 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.find(params[:id])
   end  
 
+  def update
+    @care_user = CareUser.find(params[:care_user_id])
+    @schedule = Schedule.find(params[:id])
+    @schedule.update(schedule_params)
+  end
+
   def destroy
     care_user = CareUser.find(params[:care_user_id])
     care_user.destroy

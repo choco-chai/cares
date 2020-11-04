@@ -8,7 +8,7 @@
     </h3>
   </div>
       <%= "担当：#{@schedule.user.username}"%>
-      <%= link_to "編集", edit_care_user_path(@schedule) %>
+      <%= link_to "編集", edit_care_user_schedule_path(@care_user,@schedule), method: :get %>
   <div class="contents">
       <div class="show-content">
       <%= @schedule.text%>
