@@ -26,6 +26,8 @@ class SchedulesController < ApplicationController
   def show
     @care_user = CareUser.find(params[:care_user_id])
     @schedule = Schedule.find(params[:id])
+    @comment = Comment.new
+    @comments = @schedule.comments.includes(:user)
   end
 
   def edit

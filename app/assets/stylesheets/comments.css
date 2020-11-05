@@ -1,0 +1,23 @@
+.form-textarea-comment {
+  font-size: 18px;
+  padding: 0.5em;
+  border: 2px solid #ffb6b9;
+  border-radius: 15px;
+  height: 60px;
+  width: 330px;
+  resize: none;
+  padding-left: 10px;
+}
+
+.comments-lists{
+  padding: 5px;
+}
+
+.comments-list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+
+.comment_user{
+  font-size: 12px;
+}

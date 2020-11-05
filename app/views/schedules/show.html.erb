@@ -33,7 +33,27 @@
       <div class="headline">
         コメント
       </div>
-      <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+        <%= form_with(model: [@care_user, @schedule, @comment], local: true) do |f| %>
+        <%= f.text_area :text, class: 'form-textarea-comment', placeholder: "コメント入力" %>
+        <%= f.submit "送信" %>
+        <% end %>
     </div>
+
+    <div class="contents">
+      <div class="headline">
+        コメント一覧
+      </div>
+      <ul class="comments_lists">
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+            <li class="comments_list">
+              <%= comment.user.username %>
+              <%= comment.text%>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
   </div>
 </div>
