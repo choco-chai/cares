@@ -44,6 +44,7 @@
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | text             | string     | null: false                    |
+| care_user        | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
 | schedule         | references | null: false, foreign_key: true |
 
