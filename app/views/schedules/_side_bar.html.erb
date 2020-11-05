@@ -7,15 +7,16 @@
 
 <div class="side-bar-main">
   <div class="create-care_user">
-    <a href="#">＋　新規利用者登録</a>
+    <%= link_to "＋　新規利用者登録", new_care_user_path%>
   </div>
 
-  <div class="care_user">
     <% @care_users.each do |care_user|%>
+    <div class="care_user">
       <%= link_to "#{care_user.name}さん", care_user_schedules_path(care_user) %></a>
+    </div>
     <% end %>
-  </div>
-    <%= link_to "この利用者情報を削除する", care_user_path(@care_user), method: :delete %>
+
+    <%= link_to "この利用者情報を削除する", care_user_path(@care_user), method: :delete, data: {confirm: "今スケジュールを表示している利用者さんを削除してよろしいですか？"} %>
     <%= link_to "利用者選択へ戻る", root_path %>
 </div>
 

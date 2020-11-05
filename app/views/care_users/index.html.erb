@@ -8,10 +8,10 @@
     <a href="#">＋　新規利用者登録</a>
   </div>
 
-  <div class="care_user">
     <% @care_users.each do |care_user|%>
+    <div class="care_user">
       <%= link_to "#{care_user.name}さん", care_user_schedules_path(care_user) %>
+    </div>
     <% end %>
-  </div>
   </div>
 </div>
