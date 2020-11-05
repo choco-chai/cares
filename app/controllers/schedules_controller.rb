@@ -40,14 +40,15 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    care_user = CareUser.find(params[:care_user_id])
-    care_user.destroy
-    redirect_to root_path
+    @care_user = CareUser.find(params[:care_user_id])
+    schedule = Schedule.find(params[:id])
+    schedule.destroy
+    redirect_to care_user_schedules_path(@care_user)
   end
 
   private
 
   def schedule_params
-    params.require(:schedule).permit(:times, :title, :text).merge(care_user_id: params[:care_user_id], user_id: current_user.id)
+    params.require(:schedule).permit(:times, :title, :text, images: []).merge(care_user_id: params[:care_user_id], user_id: current_user.id)
   end
 end

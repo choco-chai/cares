@@ -17,6 +17,12 @@ class CareUsersController < ApplicationController
     end
   end
 
+  def destroy
+    care_user = CareUser.find(params[:care_user_id])
+    care_user.destroy
+    redirect_to root_path
+  end
+
   private
 
   def care_user_params

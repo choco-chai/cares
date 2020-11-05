@@ -100,11 +100,13 @@ input[type="text"] {
   padding: 5px;
   border: 2px solid #ffb6b9;
   border-radius: 15px;
+  background-color: #fff;
   overflow: hidden;
 }
 
 input[type="text"]:focus {
   border-color: #56a9ff;
+  background-color: #fff;
   outline: 0;
 }
 
@@ -112,11 +114,13 @@ input[type="text"]#new {
   width: 480px;
   padding: 5px;
   border: 2px solid #ffb6b9;
+  background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
 }
 
 input[type="text"]#new:focus {
   border-color: #56a9ff;
+  background-color: #fff;
   outline: 0;
 }

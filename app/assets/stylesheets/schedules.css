@@ -126,7 +126,7 @@ a.logout:hover {
 
 .daily-schedule {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
   font-size: 35px;
   padding: 30px 5px 0;
@@ -150,7 +150,7 @@ a.logout:hover {
 
 hr.ex {
   height: 2px;
-  width: 90%;
+  width: 100%;
   border: none;
   border-top: 2px #000000 dotted;
   }
@@ -237,6 +237,7 @@ h2:after {
   text-align:center;
   padding: 20px 50px;
   border-radius: 30px;
+  overflow: scroll;
 }
 
 .contents {
@@ -246,16 +247,27 @@ h2:after {
   margin: 40px;
 }
 
+.contents1 {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  margin: 40px;
+}
+
 .headline {
   color: #4e454a;
   font-size: 25px;
+}
+
+.headline1 {
+  color: #4e454a;
+  font-size: 25px; 
 }
 
 .form-input {
   width: 480px;
   border-radius: 15px;
   overflow: hidden;
-  
 }
 
 .form-text {
@@ -270,6 +282,16 @@ h2:after {
 .form-text:focus {
   border-color: #56a9ff;
   outline: 0;
+}
+
+.form-text#new {
+  font-size: 20px;
+  border: 2px solid #ffb6b9;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 70px;
+  width: 480px;
+  padding-left: 10px;
 }
 
 .form-textarea {
@@ -299,6 +321,15 @@ textarea:focus {
 .time:focus {
   border-color: #56a9ff;
   outline: 0;
+}
+
+.file-upload {
+  padding: 40px 30px;
+}
+
+.image_form {
+  display: inline-block;
+  padding: 20px;
 }
 
 /* 詳細画面 */
@@ -336,3 +367,10 @@ h3:after {
   text-align: left;
 }
 
+.img-content {
+  padding: 5px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}

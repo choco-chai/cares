@@ -9,6 +9,8 @@
   </div>
       <%= "担当：#{@schedule.user.username}"%>
       <%= link_to "編集", edit_care_user_schedule_path(@care_user,@schedule), method: :get %>
+      <%= link_to "削除", care_user_schedule_path(@care_user), method: :delete %>
+      
   <div class="contents">
       <div class="show-content">
       <%= @schedule.text%>
@@ -20,7 +22,11 @@
       <div class="headline">
         写真
       </div>
-      <%# f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+      <div class="img-content">
+      <% @schedule.images.each do |image| %>
+        <%= image_tag image, class:'images' if @schedule.images.attached? %>
+      <% end%>
+      </div>
     </div>
 
     <div class="contents">

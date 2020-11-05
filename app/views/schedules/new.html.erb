@@ -8,7 +8,7 @@
       <div class="headline">
       実施時刻
       </div>
-      <%= f.text_field :times, class: 'form-text', id: 'new', placeholder: 'ケア開始時刻を入力' %>
+      <%= f.text_field :times, class: 'form-text', id: 'new', placeholder: 'ケア開始時刻を入力 (例)09:00、13:30' %>
     </div>
 
     <div class="contents">
@@ -26,14 +26,20 @@
     </div>
 
     <div class="contents">
-      <div class="headline">
+      <div class="headline1">
         写真
       </div>
-      <%# f.file_field :images, name: 'message[images][]', id: 'message_image' %>
+    
+    <div class="file-upload">
+      <%= f.file_field :images, name: 'schedule[images][]', id: 'schedule_image', class: 'image_form' %>
+        <div id="image-list"></div>
+        <% @schedule.images.each do |image| %>
+          <%= image_tag image, class: 'images' if @schedule.images.attached? %>
+        <% end %>
     </div>
-
+    </div>
       <%= f.submit '入力内容を保存' %>
-
   <% end %>
+      <%= link_to "#{@care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
   </div>
 </div>
