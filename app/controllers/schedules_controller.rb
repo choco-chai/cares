@@ -43,8 +43,8 @@ class SchedulesController < ApplicationController
 
   def destroy
     @care_user = CareUser.find(params[:care_user_id])
-    schedule = Schedule.find(params[:id])
-    schedule.destroy
+    @schedule = Schedule.find(params[:id])
+    @schedule.destroy
     redirect_to care_user_schedules_path(@care_user)
   end
 

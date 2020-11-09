@@ -7,11 +7,19 @@
     <%= @schedule.title%>
     </h3>
   </div>
-      <%= "担当：#{@schedule.user.username}"%>
-      <%= link_to "編集", edit_care_user_schedule_path(@care_user,@schedule), method: :get %>
-      <%= link_to "削除", care_user_schedule_path(@care_user), method: :delete %>
-      
-  <div class="contents">
+    <div class="edits">
+      <div class="show_user">
+        <%= "担当：#{@schedule.user.username}"%>
+      </div>
+      <div class="show_button">
+        <%= link_to "編集", edit_care_user_schedule_path(@care_user,@schedule), method: :get %>
+      </div>
+      <div class="show_button">
+        <%= link_to "削除", care_user_schedule_path(@care_user,@schedule), method: :delete, data: {confirm: "このケア内容を削除してよろしいですか？"} %>
+      </div>
+    </div>
+
+  <div class="content_show">
       <div class="show-content">
       <%= @schedule.text%>
         
@@ -34,8 +42,10 @@
         コメント
       </div>
         <%= form_with(model: [@care_user, @schedule, @comment], local: true) do |f| %>
-        <%= f.text_area :text, class: 'form-textarea-comment', placeholder: "コメント入力" %>
-        <%= f.submit "送信" %>
+        <ul class="comment-form">
+          <li><%= f.text_area :text, class: 'form-textarea-comment', placeholder: "コメント入力" %></li>
+          <li><%= f.submit "送信", id: 'comment' %></li>
+        </ul>
         <% end %>
     </div>
 
@@ -47,13 +57,17 @@
         <% if @comments %>
           <% @comments.each do |comment| %>
             <li class="comments_list">
-              <%= comment.user.username %>
               <%= comment.text%>
+              <p class="comments_lists_name">
+                (<%= comment.user.username %> より)
+              </p>
             </li>
           <% end %>
         <% end %>
       </ul>
     </div>
-    <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+    <div class="back">
+      <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+    </div>
   </div>
 </div>

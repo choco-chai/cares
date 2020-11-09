@@ -1,7 +1,7 @@
 <div class="schedules">
   <div class="schedule">
     <div class="daily-schedule-title">
-      <%= "#{@care_user.name}さん　一日のスケジュール" %>
+      <%= "#{@care_user.name}さん　本日のケア一覧" %>
     </div>
     <%= render partial: 'care_content', collection: @schedules, as: "schedule" %>
     <div class="new_button">

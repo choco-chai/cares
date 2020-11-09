@@ -1,15 +1,15 @@
 <div class="care_user-new-top">
   <div class="care_user-new-main">
     <div class="care_user-new-title">
-      利用者を選択してください
+      利用者を<br>選択して<br>ください
     </div>
     
     <div class="create-care_user">
-    <a href="#">＋　新規利用者登録</a>
-  </div>
+      <%= link_to "＋　新規利用者登録", new_care_user_path%>
+    </div>
 
     <% @care_users.each do |care_user|%>
-    <div class="care_user">
+    <div class="care_user_index">
       <%= link_to "#{care_user.name}さん", care_user_schedules_path(care_user) %>
     </div>
     <% end %>

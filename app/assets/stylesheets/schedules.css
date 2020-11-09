@@ -60,6 +60,7 @@ a.logout:hover {
   margin: 10px auto 40px;
   padding: 10px;
   font-size: 20px;
+  width: 230px;
   color: #dc6b9a;
   text-decoration: none;
   border-radius: 10px;
@@ -74,7 +75,7 @@ a.logout:hover {
 .care_user a{
   display: block;
   background-color: #fef9fb;
-  width: 90%;
+  width: 230px;
   margin: 20px auto 30px;
   padding: 10px;
   font-size: 20px;
@@ -89,12 +90,66 @@ a.logout:hover {
   text-decoration: none;
 }
 
+.care_user_index a{
+  display: block;
+  background-color: #ffb6b9;
+  width: 230px;
+  margin: 20px auto 30px;
+  padding: 10px;
+  font-size: 20px;
+  color: #4e454a;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.care_user_index:hover a{
+  color: #FFF;
+  background-color: #ffcccc;
+  text-decoration: none;
+}
+
+.care_user_delete a{
+  color: #ff9999;
+  display: block;
+  background-color: #fef9fb;
+  width: 230px;
+  margin: 60px auto 30px;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.care_user_delete:hover a{
+  color: #FFF;
+  background-color: #ff3333;
+  text-decoration: none;
+}
+
+.care_user_back a{
+  display: block;
+  background-color: #ffcccc;
+  width: 230px;
+  margin: 20px auto 30px;
+  padding: 10px;
+  font-size: 20px;
+  color: #2e7599;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.care_user_back:hover a{
+  color: #FFF;
+  background-color: #ffcccc;
+  text-decoration: none;
+}
+
 /* スケジュール一覧画面 */
 
 .schedules {
   background-color: #F4DADA;
   width: calc(100% - 300px);
-  height: 100vh;
+  height: calc(100vh + 50px);
   display: inline-block;
   text-align:center;
   position: relative;
@@ -136,8 +191,9 @@ a.logout:hover {
   color: #4e454a;
 }
 
-.daily-schedule-content {
-  color: #504946;
+.daily-schedule-content a{
+  color: #5252cc;
+  text-decoration: none;
 }
 
 .daily-schedule-staff {
@@ -155,7 +211,7 @@ hr.ex {
   border-top: 2px #000000 dotted;
   }
 
-.new_button {
+.new_button a{
   font-size: 22px;
   color: #fff;
   width: 40%;
@@ -167,7 +223,7 @@ hr.ex {
   display:block;
 }
 
-.new_button:hover {
+.new_button:hover a{
   color: #fff;
   background: #ffcccc;
 } 
@@ -334,6 +390,13 @@ textarea:focus {
 
 /* 詳細画面 */
 
+.content_show {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 40px;
+}
+
 h3 {
   font-size: 30px;
   color: #4e454a;
@@ -373,4 +436,58 @@ h3:after {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.edits {
+  display: flex;
+  justify-content: flex-end;
+  width: 700px;
+  margin: 0 50px;
+}
+
+.show_user {
+  display: inline-block;
+  font-size: 23px;
+  padding: 15px 10px 0;
+}
+
+.show_button a{
+  display: inline-block;
+  background-color: #8080ff;
+  width: 80px;
+  margin: 5px 15px;
+  padding: 8px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.show_button:hover a{
+  color: #FFF;
+  background-color: #ffcccc;
+  text-decoration: none;
+}
+
+/* 編集完了画面 */
+
+h4 {
+  font-size: 22px;
+  padding: 60px 0 30px;
+}
+
+input[type="submit"]#edit {
+  font-size: 20px;
+  width: 250px;
+  margin: 10px 0 50px;
+  padding: 15px;
+  color: #fff;
+  background: #ff8080;
+  border-radius: 15px;
+  overflow: hidden;
+  border-style: none;
+}
+
+input[type="submit"]#edit:hover {
+  color: #fff;
+  background: #ffcccc;
 }

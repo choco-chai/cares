@@ -11,8 +11,8 @@
 }
 
 .care_user-new-main {
-  width: 45%;
-  height: 52%;
+  width: 400px;
+  height: 500px;
   text-align: center;
   background-color: #fef9fb;
   border-radius: 30px;
@@ -22,16 +22,18 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  padding: 20px;
+  overflow: scroll;
 }
 
 .care_user-new-title {
   font-size: 35px;
   color: #4e454a;
-  width: 50%;
+  width: 70%;
   padding: 1rem 2rem;
   background: #ffc6b3;
   border-radius: 20px;
-  margin: 30px auto 20px;
+  margin: 10px auto 20px;
 }
 
 .form-input-care_user {

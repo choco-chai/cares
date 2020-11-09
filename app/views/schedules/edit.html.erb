@@ -8,7 +8,9 @@
     編集
     </h3>
   </div>
-      <%= "担当：#{@schedule.user.username}"%>
+  <div class="show_user">
+    <%= "担当：#{@schedule.user.username}"%>
+  </div>
   <%= form_with model: [@care_user, @schedule], class: 'form', local: true do |f| %>
   <div class="contents">
       <div class="headline">
@@ -41,13 +43,15 @@
         <% @schedule.images.each do |image| %>
           <%= image_tag image, class: 'images' if @schedule.images.attached? %>
         <% end %>
+      </div>
+      
     </div>
-    </div>
-
-      <%= f.submit '入力内容を保存' %>
+    <%= f.submit '入力内容を保存', id: 'edit' %>
 
   <% end %>
-      <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+      <div class="back">
+        <%= link_to "#{@schedule.care_user.name}さんの一覧へ戻る", care_user_schedules_path %>
+      </div>
     </div>
   </div>
 </div>
