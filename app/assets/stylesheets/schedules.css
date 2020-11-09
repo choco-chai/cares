@@ -428,6 +428,7 @@ h3:after {
   margin: 5px auto;
   padding: 15px;
   text-align: left;
+  white-space: pre-wrap;
 }
 
 .img-content {
@@ -490,4 +491,8 @@ input[type="submit"]#edit {
 input[type="submit"]#edit:hover {
   color: #fff;
   background: #ffcccc;
+}
+
+::marker {
+  color: #fef9fb;
 }
