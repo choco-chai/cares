@@ -38,7 +38,11 @@ class SchedulesController < ApplicationController
   def update
     @care_user = CareUser.find(params[:care_user_id])
     @schedule = Schedule.find(params[:id])
-    @schedule.update(schedule_params)
+    if @schedule.update(schedule_params)
+      redirect_to care_user_schedule_path(@care_user,@schedule)
+    else
+      render :edit
+    end
   end
 
   def destroy
