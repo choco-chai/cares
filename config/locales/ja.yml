@@ -1,0 +1,10 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       username: ユーザー名
+     schedule:
+       text: 本文
+       image: 画像
+       title: タイトル
+       times: ケア開始時刻
