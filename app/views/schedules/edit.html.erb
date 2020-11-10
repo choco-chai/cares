@@ -12,6 +12,7 @@
     <%= "担当：#{@schedule.user.username}"%>
   </div>
   <%= form_with model: [@care_user, @schedule], class: 'form', local: true do |f| %>
+  <%= render 'layouts/error_messages', model: f.object %>
   <div class="contents">
       <div class="headline">
       実施時刻
