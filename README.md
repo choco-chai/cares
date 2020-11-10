@@ -46,19 +46,19 @@ Password:aaa222
   - ケアを受ける人(利用者)の名前が表示される
 ![ユーザー登録](https://user-images.githubusercontent.com/71584841/98656937-9d800480-2384-11eb-805d-3bd304902991.gif)
 
-1. ケア一覧画面
+2. ケア一覧画面
   - 利用者の名前をクリックすると行ったケアの内容が一覧表示される
   - タイトルをクリックすると詳細画面が表示される
 ![ケア内容一覧画面](https://user-images.githubusercontent.com/71584841/98656952-a53fa900-2384-11eb-928d-c5515db06646.gif)
 
-1. 詳細画面でその日に行ったケアを確認
+3. 詳細画面でその日に行ったケアを確認
 ![詳細画面](https://user-images.githubusercontent.com/71584841/98656970-abce2080-2384-11eb-9530-1bd11ac29f7f.gif)
 
-1. ケア一覧画面から新規のケア内容を登録
+4. ケア一覧画面から新規のケア内容を登録
   - ケアの開始時刻、一覧表示画面でわかりやすいタイトル、実施内容の詳細を入力し、登録
 ![ケア内容登録](https://user-images.githubusercontent.com/71584841/98657004-ba1c3c80-2384-11eb-86df-2b4cb392b068.gif)
 
-1. コメント投稿
+5. コメント投稿
   - 詳細画面からコメントを投稿できる
 ![コメント投稿](https://user-images.githubusercontent.com/71584841/98657045-c86a5880-2384-11eb-96cb-1e1ebac26ed7.gif)
 
