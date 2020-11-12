@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :schedules
   has_many :comments
 
-  validates :username, presence: true
+  validates :username, presence: true, length: { maximum: 8 }
 
 end

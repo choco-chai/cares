@@ -67,7 +67,7 @@ Password:aaa222
 - 表示されている画像をクリックすると拡大できる機能を実装予定
 
 ## データベース設計
-![Cares ER図](https://user-images.githubusercontent.com/71584841/98640866-293a6680-236e-11eb-8aa3-5b4d986f7d04.png)
+![Cares ER図](https://user-images.githubusercontent.com/71584841/98640866-293a6680-236e-11eb-8aa3-5b4d986f7d04.png)　
 
 ## ローカルでの動作方法
 % cd projects  
