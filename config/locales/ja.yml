@@ -8,3 +8,5 @@ ja:
        image: 画像
        title: タイトル
        times: ケア開始時刻
+     care_user:
+       name: 利用者名
