@@ -7,6 +7,7 @@
     <%= @schedule.title%>
     </h3>
   </div>
+  <% if current_user.id == @schedule.user_id %>
     <div class="edits">
       <div class="show_user">
         <%= "担当：#{@schedule.user.username}"%>
@@ -18,7 +19,7 @@
         <%= link_to "削除", care_user_schedule_path(@care_user,@schedule), method: :delete, data: {confirm: "このケア内容を削除してよろしいですか？"} %>
       </div>
     </div>
-
+  <% end %>
   <div class="content_show">
       <div class="show-content"><%= @schedule.text%></div>
   </div>
