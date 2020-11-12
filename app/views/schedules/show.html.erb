@@ -29,7 +29,9 @@
       </div>
       <div class="img-content">
       <% @schedule.images.each do |image| %>
-        <%= image_tag image, class:'images' if @schedule.images.attached? %>
+        <%= link_to image, "data-lightbox" => image do %>
+          <%= image_tag image, class:'images' if @schedule.images.attached? %>
+        <% end %>
       <% end%>
       </div>
     </div>
