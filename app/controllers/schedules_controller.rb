@@ -4,7 +4,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new
     @care_user = CareUser.find(params[:care_user_id])
     @care_users = CareUser.all
-    @schedules = @care_user.schedules.includes(:care_user)
+    @schedules = @care_user.schedules.where("created_at >= ?", Date.today)
   end
 
   def new
