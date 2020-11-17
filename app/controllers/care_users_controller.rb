@@ -1,4 +1,5 @@
 class CareUsersController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @care_users = CareUser.all

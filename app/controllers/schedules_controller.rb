@@ -1,19 +1,19 @@
 class SchedulesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_care_user
+  before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
   def index
     @schedule = Schedule.new
-    @care_user = CareUser.find(params[:care_user_id])
     @care_users = CareUser.all
     @schedules = @care_user.schedules.where("created_at >= ?", Date.today)
   end
 
   def new
-    @care_user = CareUser.find(params[:care_user_id])
     @schedule = Schedule.new
   end
 
   def create
-    @care_user = CareUser.find(params[:care_user_id])
     @schedule = @care_user.schedules.new(schedule_params)
     if @schedule.save
       redirect_to care_user_schedules_path(@care_user)
@@ -24,20 +24,15 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @care_user = CareUser.find(params[:care_user_id])
-    @schedule = Schedule.find(params[:id])
     @comment = Comment.new
     @comments = @schedule.comments.includes(:user)
   end
 
   def edit
-    @care_user = CareUser.find(params[:care_user_id])
-    @schedule = Schedule.find(params[:id])
+
   end  
 
   def update
-    @care_user = CareUser.find(params[:care_user_id])
-    @schedule = Schedule.find(params[:id])
     if @schedule.update(schedule_params)
       redirect_to care_user_schedule_path(@care_user,@schedule)
     else
@@ -46,8 +41,6 @@ class SchedulesController < ApplicationController
   end
 
   def destroy
-    @care_user = CareUser.find(params[:care_user_id])
-    @schedule = Schedule.find(params[:id])
     @schedule.destroy
     redirect_to care_user_schedules_path(@care_user)
   end
@@ -56,5 +49,13 @@ class SchedulesController < ApplicationController
 
   def schedule_params
     params.require(:schedule).permit(:times, :title, :text, images: []).merge(care_user_id: params[:care_user_id], user_id: current_user.id)
+  end
+
+  def set_care_user
+    @care_user = CareUser.find(params[:care_user_id])
+  end
+
+  def set_schedule
+    @schedule = Schedule.find(params[:id])
   end
 end
