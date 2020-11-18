@@ -7,6 +7,7 @@ Cares
 
 ## URL
 https://cares-30453.herokuapp.com/
+【Basic認証】ユーザー名:admin0315 パスワード:333444
 
 ## テスト用アカウント
 Email:sample123@sample.com
