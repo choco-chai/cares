@@ -46,6 +46,10 @@ class SchedulesController < ApplicationController
     redirect_to care_user_schedules_path(@care_user)
   end
 
+  def past
+
+  end
+
   private
 
   def schedule_params

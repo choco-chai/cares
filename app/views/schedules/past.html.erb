@@ -1,0 +1,8 @@
+<div class="schedules">
+  <div class="schedule">
+    <div class="daily-schedule-title">
+      <%= "#{@care_user.name}さん　過去一ヶ月のケア一覧" %>
+    </div>
+    <%= render partial: 'care_content', collection: @past_schedules, as: "schedule" %>
+  </div>
+</div>
