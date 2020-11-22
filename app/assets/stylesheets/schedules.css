@@ -497,3 +497,16 @@ input[type="submit"]#edit:hover {
 ::marker {
   color: #fef9fb;
 }
+
+/* 過去の投稿表示画面 */
+
+.daily-schedule-times-past {
+  font-size: 23px;
+  color: #4e454a;
+}
+
+.daily-schedule-content a{
+  font-size: 30px;
+  color: #5252cc;
+  text-decoration: none;
+}

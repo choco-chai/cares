@@ -1,0 +1,13 @@
+<div class="daily-schedule">
+    <div class="daily-schedule-times-past">
+      <%= schedule.created_at.strftime('%m/%d')%>
+      <%= schedule.times %>
+    </div>
+    <div class="daily-schedule-content">
+      <%= link_to schedule.title, care_user_schedule_path(@care_user.id,schedule.id) %>
+    </div>
+    <div class="daily-schedule-staff">
+      担当：<%= schedule.user.username%>
+    </div>
+</div>
+    <hr class="ex">

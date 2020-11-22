@@ -7,7 +7,6 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new
     @care_users = CareUser.all
     @schedules = @care_user.schedules.where("created_at >= ?", Date.today)
-    @past_schedules = Schedule.where(created_at: 1.day.ago.all_month)
   end
 
   def new
@@ -47,7 +46,9 @@ class SchedulesController < ApplicationController
   end
 
   def past
-
+    @schedule = Schedule.new
+    @care_users = CareUser.all
+    @past_schedules = @care_user.schedules.where(created_at: 1.day.ago.all_month)
   end
 
   private
