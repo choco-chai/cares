@@ -19,6 +19,9 @@
     <div class="care_user_delete">
       <%= link_to "この利用者情報を削除", care_user_path(@care_user), method: :delete, data: {confirm: "今スケジュールを表示している利用者さんを削除してよろしいですか？"} %>
     </div>
+        <div class="care_user_past">
+      <%= link_to "過去1ヶ月の記録を見る", past_care_user_schedule_path(@care_user,id: 1) %>
+    </div>
     <div class="care_user_back">
       <%= link_to "利用者選択へ戻る", root_path %>
     </div>

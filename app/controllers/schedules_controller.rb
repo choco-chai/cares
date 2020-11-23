@@ -46,8 +46,8 @@ class SchedulesController < ApplicationController
   end
 
   def past
-    @schedule = Schedule.new
-    @care_users = CareUser.all
+    @schedule = Schedule.find(params[:id])
+    @care_users = CareUser.find(params[:care_user_id])
     @past_schedules = @care_user.schedules.where(created_at: 1.day.ago.all_month)
   end
 
