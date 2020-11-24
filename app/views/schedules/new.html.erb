@@ -40,7 +40,10 @@
     </div>
     </div>
       <%= f.submit '入力内容を保存', id: 'edit' %>
+      <div class="back-new">
+        <%= link_to "戻る", care_user_schedules_path(@care_user) %>
+      </div>
   <% end %>
-c
+
   </div>
 </div>

@@ -410,6 +410,25 @@ textarea:focus {
   padding: 20px;
 }
 
+.back-new a{
+  display: block;
+  background-color: #fff;
+  width: 100px;
+  margin: 5px auto;
+  padding: 10px;
+  font-size: 16px;
+  color: #2e7599;
+  text-decoration: none;
+  border-radius: 10px;
+  border: solid 1px #7ab1cc;
+}
+
+.back-new:hover a{
+  color: #FFF;
+  background-color: #ffcccc;
+  text-decoration: none;
+}
+
 /* 詳細画面 */
 
 .content_show {
