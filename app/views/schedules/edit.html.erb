@@ -3,13 +3,16 @@
 
   <div class="contents">
     <h3>
+    <%= @schedule.created_at.strftime('%m/%d')%>
     <%= @schedule.times%>
     <%= @schedule.title%>
     編集
     </h3>
   </div>
-  <div class="show_user">
-    <%= "担当：#{@schedule.user.username}"%>
+  <div class="edits">
+    <div class="show_user">
+      <%= "担当：#{@schedule.user.username}"%>
+    </div>
   </div>
   <%= form_with model: [@care_user, @schedule], class: 'form', local: true do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
