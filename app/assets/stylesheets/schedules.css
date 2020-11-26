@@ -472,6 +472,7 @@ h3:after {
   text-align: left;
   line-height: normal;
   word-wrap: break-word;
+  white-space: pre-wrap;
   overflow: scroll;
 }
 
