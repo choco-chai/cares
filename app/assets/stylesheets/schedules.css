@@ -471,7 +471,8 @@ h3:after {
   padding: 15px;
   text-align: left;
   line-height: normal;
-  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: scroll;
 }
 
 .img-content {
